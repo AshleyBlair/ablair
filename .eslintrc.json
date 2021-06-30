@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "eslint:recommended", // don't question whats being rec
+    "plugin:import/errors",
+    "plugin:react/recommended", // you can question whats being rec here
+    "plugin:jsx-a11y/recommended", // accessibilty
+    // prettiers have to be last here
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "no-console": 1, // gives warning, green instead of read
+    "react-hooks/rules-of-hooks": 2, // make it an error
+    "react-hooks/exhaustive-deps": 1, // effects, throw warning
+    "quotes": [2, "single", "avoid-escape"]
+  },
+  "plugins": ["react", "import", "jsx=a11y", "react-hooks"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "setting": {
+    "react": {
+      "version": "detect" // figures out version itself from package.json
+    }
+  }
+}
